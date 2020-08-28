@@ -86,7 +86,9 @@ $ git push origin master
 - `![]()`을 작성하고 `()` 안에 이미지 주소를 입력합니다. `[]` 안에는 이미지 파일의 이름을 작성합니다. 
 - 로컬에 이미 파일을 저장한 경우 절대 경로가 아닌 상대 경로를 사용하여 이미지를 저장합니다. 
 
-![git](C:\Users\gpwlt\Pictures\git.png)
+![git](https://user-images.githubusercontent.com/44856614/91562222-cd1f9300-e977-11ea-800c-4c5717b9fa41.png)
+
+*<small>\*이미지 주소 쉽게 확인하는 법:  issue에 가서 해당 이미지를 드래그하여 갖다놓으면 이미지 주소를 뿌려줍니다</small>* 
 
 
 
