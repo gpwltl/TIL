@@ -1,6 +1,4 @@
-#TIL
-Today I Learned !!
+# TIL
+Today I Learned :pencil2:
 
-## 나의 다짐
-- 매일 커밋을 한다.
-- 치팅하지 않는다.
+> 1day 1commit 목표

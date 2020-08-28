@@ -100,149 +100,158 @@ JSON 기반의 Document 기반 데이터 관리
 
 ### 3. 데이터 CRUD
 
-1. **Document 입력 **
+#### 1. Create
 
-   - `db.emp.insertOne()` : 한개의 document 생성
-   - `db.emp.insertMany()` : 여러개 document 생성
+> Document 
 
-   ```sql
-   db.emp.insertOne(
-   	{name: "yoon", age: 24, status: "pending"}
-   )
-   ```
+- `db.emp.insertOne()` : 한개의 document 생성
+- `db.emp.insertMany()` : 여러개 document 생성
 
-   ```sql
-   db.emp.insertMany([
-   	{user_id: "abc001", age: 25, status: "B"},
-       {user_id: "abc002", age: 22, status: "A"},
-       {user_id: "abc003", age: 28, status: "A"},
-       {user_id: "abc004", age: 26, status: "B"},
-   ])
-   ```
+```sql
+db.emp.insertOne(
+	{name: "yoon", age: 24, status: "pending"}
+)
+```
+
+```sql
+db.emp.insertMany([
+	{user_id: "abc001", age: 25, status: "B"},
+    {user_id: "abc002", age: 22, status: "A"},
+    {user_id: "abc003", age: 28, status: "A"},
+    {user_id: "abc004", age: 26, status: "B"},
+])
+```
 
 ​	
 
- 2. **Document 읽기(검색)**
+#### 2. Read
 
-    - `db.emp.findOne()` : 매칭되는 한 개의 document 검색
-    - `db.emp.find()` :  매칭되는 여러개의 document 검색
+> Document 읽기 (검색)
 
-    
+- `db.emp.findOne()` : 매칭되는 한 개의 document 검색
+- `db.emp.find()` :  매칭되는 여러개의 document 검색
 
-    - find() / findOne() 명령과 sql문 비교
 
-    ```sql
-    --select * from emp
-    db.emp.find()
-    
-    --select _id, user_id, status from emp
-    db.emp.find({ }, {user_id: 1, status: 1})
-    
-    --select user_id, status from emp
-    db.emp.find({ }, {user_id: 1, status: 1, _id: 0})
-    
-    --select * from emp where status='A'
-    db.emp.find({status: "A"})
-    
-    --select user_id, status from emp where status='A'
-    db.emp.find({status: "A"}, {user_id:1, status:1, _id:0})
-    
-    --select * from emp where status='A' and age=50
-    db.emp.find({status: "A", age: 50})
-    
-    --select * from emp where status='A' or age=50
-    db.emp.find({$or: [{status:"A"}, {age:50}]})
-    ```
 
-    
+- find() / findOne() 명령과 sql문 비교
 
-    - 비교 연산자
+```sql
+--select * from emp
+db.emp.find()
 
-      | mongo 연산자 | 연산자 |
-      | ------------ | ------ |
-      | $eq          | =      |
-      | $gt          | >      |
-      | $gte         | \>=    |
-      | $lt          | <      |
-      | $lte         | <=     |
-      | $ne          | !=     |
-      | $in          | in     |
-      | $nin         | not in |
-      | $regex       | like   |
+--select _id, user_id, status from emp
+db.emp.find({ }, {user_id: 1, status: 1})
 
-      
+--select user_id, status from emp
+db.emp.find({ }, {user_id: 1, status: 1, _id: 0})
 
-      - 예제
+--select * from emp where status='A'
+db.emp.find({status: "A"})
 
-      ```sql
-      --select * from emp where age > 25
-      db.emp.find({age: {$gt: 25}})
-      
-      --select * from emp where user_id like "%bc%"
-      db.emp.find({user_id: {$regex: /bc/ }})
-      --select * from emp where user_id like "bc%"
-      db.emp.find({user_id: {$regex: /^bc/}})
-      --select * from emp where user_id like "%bc"
-      db.emp.find({user_id: {$regex: /bc$/}})
-      
-      --select * from emp where status="A" order by user_id asc
-      db.emp.find({status:"A"}).sort({user_id:1})
-      --select * from emp hwere status="A" order by user_id desc
-      db.emp.find({status:"A"}).sort({user_id:-1})
-      
-      --select count(*) from emp
-      db.emp.count()
-      --select count(*) from emp where age>30
-      db.emp.count({age: {$gt: 30}})
-      
-      --select distinct(status) from emp
-      db.emp.aggregate([{$group: {_id: "$status"}}])
-      
-      --select * from emp limit 1 
-      db.emp.findOne()
-      db.emp.find().limit(1)
-      ```
+--select user_id, status from emp where status='A'
+db.emp.find({status: "A"}, {user_id:1, status:1, _id:0})
 
-      
+--select * from emp where status='A' and age=50
+db.emp.find({status: "A", age: 50})
 
-3. **Document 수정 **
+--select * from emp where status='A' or age=50
+db.emp.find({$or: [{status:"A"}, {age:50}]})
+```
 
-   - `db.emp.updateOne()` : 매칭되는 한 개의 document 업데이트
-   - `db.emp.updateMany()` : 매칭되는 여러 개의 document 업데이트
 
-   
 
-   - `$set` : 필드 값 설정
-   - `$inc` : 필드 값을 증가/감소
+- 비교 연산자
 
-   
+  | mongo 연산자 | 연산자 |
+  | ------------ | ------ |
+  | $eq          | =      |
+  | $gt          | >      |
+  | $gte         | \>=    |
+  | $lt          | <      |
+  | $lte         | <=     |
+  | $ne          | !=     |
+  | $in          | in     |
+  | $nin         | not in |
+  | $regex       | like   |
 
-   - updateOne() / updateMany() 명령과 sql 비교
+  
 
-   ```sql
-   --update emp set status="C" where age>45
-   db.emp.updateMany({age: {$gt: 45}}, {$set: {status: "C"}})
-   
-   --updeat emp set age = age+3 where status="A"
-   db.emp.updateMany({status: "A"}, {$inc: {age: 3}})
-   ```
+  - 예제
 
-   
+  ```sql
+  --select * from emp where age > 25
+  db.emp.find({age: {$gt: 25}})
+  
+  --select * from emp where user_id like "%bc%"
+  db.emp.find({user_id: {$regex: /bc/ }})
+  --select * from emp where user_id like "bc%"
+  db.emp.find({user_id: {$regex: /^bc/}})
+  --select * from emp where user_id like "%bc"
+  db.emp.find({user_id: {$regex: /bc$/}})
+  
+  --select * from emp where status="A" order by user_id asc
+  db.emp.find({status:"A"}).sort({user_id:1})
+  --select * from emp hwere status="A" order by user_id desc
+  db.emp.find({status:"A"}).sort({user_id:-1})
+  
+  --select count(*) from emp
+  db.emp.count()
+  --select count(*) from emp where age>30
+  db.emp.count({age: {$gt: 30}})
+  
+  --select distinct(status) from emp
+  db.emp.aggregate([{$group: {_id: "$status"}}])
+  
+  --select * from emp limit 1 
+  db.emp.findOne()
+  db.emp.find().limit(1)
+  ```
 
-4. **Document 삭제**
 
-   - `db.emp.deleteOne()`  : 매칭되는 한 개의 document 삭제
 
-   - `db.emp.deleteMany()` : 매칭되는 여러 document 삭제
 
-     
+#### Update
 
-   - deleteOne() / deleteMany() 명령과 sql 비교
+> Document Update
 
-   ```sql
-   --delete from people
-   db.emp.deleteMany({})
-   
-   --delete from emp where status="D"
-   db.emp.deleteMany({status: "D"})
-   ```
+- `db.emp.updateOne()` : 매칭되는 한 개의 document 업데이트
+- `db.emp.updateMany()` : 매칭되는 여러 개의 document 업데이트
+
+
+
+- `$set` : 필드 값 설정
+- `$inc` : 필드 값을 증가/감소
+
+
+
+- updateOne() / updateMany() 명령과 sql 비교
+
+```sql
+--update emp set status="C" where age>45
+db.emp.updateMany({age: {$gt: 45}}, {$set: {status: "C"}})
+
+--updeat emp set age = age+3 where status="A"
+db.emp.updateMany({status: "A"}, {$inc: {age: 3}})
+```
+
+
+
+#### Delete
+
+> Document 삭제
+
+- `db.emp.deleteOne()`  : 매칭되는 한 개의 document 삭제
+
+- `db.emp.deleteMany()` : 매칭되는 여러 document 삭제
+
+  
+
+- deleteOne() / deleteMany() 명령과 sql 비교
+
+```sql
+--delete from people
+db.emp.deleteMany({})
+
+--delete from emp where status="D"
+db.emp.deleteMany({status: "D"})
+```
