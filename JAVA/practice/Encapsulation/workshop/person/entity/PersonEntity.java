@@ -42,9 +42,10 @@ public class PersonEntity {
 			return ssn;
 		}
 		public void setSsn(String ssn) {
-			if(ssn.charAt(6)=='1' || ssn.charAt(6)=='3') {
+			this.ssn=ssn;
+			if(this.ssn.charAt(6)=='1' || this.ssn.charAt(6)=='3') {
 				gender = '³²';
-			} else if(ssn.charAt(6)=='2' || ssn.charAt(6)=='4') {
+			} else if(this.ssn.charAt(6)=='2' || this.ssn.charAt(6)=='4') {
 				gender = '¿©';
 			}
 		}

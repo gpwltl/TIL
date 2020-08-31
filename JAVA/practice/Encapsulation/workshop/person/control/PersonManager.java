@@ -1,12 +1,13 @@
 package workshop.person.control;
 
-import chap03.types.referencetype.MyDate;
 import workshop.person.entity.PersonEntity;
 
 public class PersonManager {
 
 	public static void main(String[] args) {
+		//PersonManager 객체생성
 		PersonManager pManager = new PersonManager();
+		//PersonEntity 배열 생성
 		PersonEntity[] persons = new PersonEntity[10];
 
 		pManager.printTitle("@@@ 인물 정보 조회 시스템 @@@");
@@ -22,15 +23,36 @@ public class PersonManager {
 
 	}
 
+	/**
+	 * 타이틀을 출력해주는 메소드
+	 * @param title
+	 */
 	public void printTitle(String title) {
 		System.out.println(title);
 
 	}
 
+	/**
+	 * 밑줄 출력(=, -)
+	 */
 	public void printTitleLine() {
-		System.out.println("====================================================");
+		for(int i=0; i<60; i++) {
+			System.out.print("=");
+		} 
+		System.out.println();
+	}
+	public void printItemLine() {
+		for(int i=0; i<60; i++) {
+			System.out.print("-");
+		} 
+		System.out.println();
 	}
 
+	
+	/**
+	 * 데이터 배열에 넣어주는 메소드
+	 * @param persons: PersonEntity 배열
+	 */
 	public void fillPerson(PersonEntity[] persons) {
 
 		persons[0] = new PersonEntity("이성호", "7212121028102", "인천 계양구", "032-392-2932");
@@ -45,33 +67,46 @@ public class PersonManager {
 		persons[9] = new PersonEntity("최철수", "7601211025101", "인천 계양구", "032-122-7832");
 	}
 
+	/**
+	 * 저장된 모든 데이터 출력해주는 메소드
+	 * @param persons
+	 */
 	public void showPerson(PersonEntity[] persons) {
 		for(PersonEntity person: persons) {
 			System.out.println("[이름]\t"+person.getName()+"\t[성별]\t"+person.getGender()+"\t[전화번호]\t"+person.getPhone());
-			System.out.println("----------------------------------------------------");
+			printItemLine();
 		}
 	}
 	
+	/**
+	 * 특정 인물에 대한 데이터 출력해주는 메소드
+	 * @param persons
+	 * @param name : 이름
+	 */
 	public void showPerson(PersonEntity[] persons, String name) {
-		System.out.println("--이름: '"+name+"'(으)로 찾기 결과입니다.");
-		System.out.println("----------------------------------------------------");
-		for(int i=0; i<persons.length; i++) {
-			if(persons[i].getName() == name) {
-			System.out.println("[이름]\t"+persons[i].getName()+"\n[성별]\t"+persons[i].getGender()+"\n[전화번호]\t"+persons[i].getPhone()+"\n[주소]\t"+persons[i].getAddress());
+		System.out.println("--이름: '"+name+"'(으)로 찾기 결과입니다.--");
+		printItemLine();
+		for(PersonEntity person: persons) {
+			if(person.getName() == name) {
+			System.out.println("[이름]\t"+person.getName()+"\n[성별]\t"+person.getGender()+"\n[전화번호]\t"+person.getPhone()+"\n[주소]\t"+person.getAddress());
 			}
 		}
 	}
 	
+	
+	/**
+	 * 해당 성별이 몇명인지 알아보는 메소드
+	 * @param persons
+	 * @param gender : 성별
+	 */
 	public void findByGender(PersonEntity[] persons, char gender) {
 		int count=0;
-		for(int i=0; i<persons.length; i++) {
-			if(persons[i].getGender() == gender)
+		for(PersonEntity person: persons) {
+			if(person.getGender() == gender)
 				count++;
-		} System.out.println("성별 : '"+gender+"'"
-				+ "는 "+count+"명 입니다.");
+		} 
+		System.out.println("성별 : '"+gender+"'"+ "는 "+count+"명 입니다.");
 		
 	}
-	
-	
 
 }
