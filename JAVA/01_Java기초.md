@@ -45,11 +45,17 @@ j2ee- server based web application
 
    */
 
-
-
-## 2. 데이터 타입
+> 클래스, 메소드를 설명할 때는 
+>
+> /**
+>  \* Greeting 클래스
+>  \* @author 윤혜지
+>  \* @version v1.0
+>  */
 
 ### 1. Primitive Data Type
+
+> String은 primitive data type이 아님
 
 - 정수형 : `byte`, `short`, `int`, `long`
   - 값 범위 : 1   2   4   8 byte
@@ -151,6 +157,7 @@ public class PassPrimitive{
 ```java
 //1. MyDate 클래스
 public class MyDate{
+    // constructor 재정의
     private int year;
     private int month;
     private int day;
