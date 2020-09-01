@@ -1,7 +1,15 @@
 package workshop.person.control;
 
 import workshop.person.entity.PersonEntity;
+import java.util.Scanner; 
 
+/**
+ * Person의 정보를 담는 클래스 
+ * @author 윤혜지
+ *
+ */
+
+//java PersonManager "여" args[0] "서울" args[1]
 public class PersonManager {
 
 	public static void main(String[] args) {
@@ -16,10 +24,16 @@ public class PersonManager {
 		pManager.fillPerson(persons);
 		pManager.showPerson(persons);
 		
-		pManager.findByGender(persons, '여');
+		Scanner scanGender = new Scanner(System.in);
+		System.out.println("확인하고 싶은 성별을 입력해주세요(남 or 여)");
+		char findGender=scanGender.next().charAt(0);
+		pManager.findByGender(persons, findGender);
 		pManager.printTitleLine();
 		
-		pManager.showPerson(persons, "김하늘");
+		Scanner scanName = new Scanner(System.in);
+		System.out.println("확인하고 싶은 이름을 입력해주세요.");
+		String findName=scanName.next();
+		pManager.showPerson(persons, findName);
 
 	}
 
@@ -87,7 +101,7 @@ public class PersonManager {
 		System.out.println("--이름: '"+name+"'(으)로 찾기 결과입니다.--");
 		printItemLine();
 		for(PersonEntity person: persons) {
-			if(person.getName() == name) {
+			if(person.getName().equals(name)) {		
 			System.out.println("[이름]\t"+person.getName()+"\n[성별]\t"+person.getGender()+"\n[전화번호]\t"+person.getPhone()+"\n[주소]\t"+person.getAddress());
 			}
 		}
@@ -102,7 +116,7 @@ public class PersonManager {
 	public void findByGender(PersonEntity[] persons, char gender) {
 		int count=0;
 		for(PersonEntity person: persons) {
-			if(person.getGender() == gender)
+			if(person.getGender()==gender)
 				count++;
 		} 
 		System.out.println("성별 : '"+gender+"'"+ "는 "+count+"명 입니다.");
