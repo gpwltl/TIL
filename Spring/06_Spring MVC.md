@@ -88,8 +88,8 @@
 ### 1) ModelAndView 클래스
 
 - `ModelAndView 클래스의 생성자`나 `setViewName() 메소드`를 이용해서 view 이름을 지정함
-
 - `addObject(String name, Object value)` 메서드를 이용해 view에 전달할 데이터를 저장함
+- 객체 저장하고 화면에 뿌리고 싶을 땐 ModelAndView 클래스를 사용하고, 객체만 저장하고 싶다면 View 클래스를 사용함
 
 ![image-20200911225542583](C:\Users\user\AppData\Roaming\Typora\typora-user-images\image-20200911225542583.png)
 
