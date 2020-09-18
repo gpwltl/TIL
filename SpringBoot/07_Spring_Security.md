@@ -21,7 +21,10 @@ spring 애플리케이션의 보안(인증, 권한, 인가)을 담당하는 스�
 1. 의존성 추가 
 
 ```xml
-<dependency>     <groupId>org.springframework.boot</groupId>     <artifactId>spring-boot-starter-security</artifactId> </dependency> 
+<dependency>     
+    <groupId>org.springframework.boot</groupId>     
+    <artifactId>spring-boot-starter-security</artifactId> 
+</dependency> 
 ```
 
 2. 브라우저에 localhost:8085/login 에 접속하여 기본 설정된 정보로 로그인을 해줍니다.
