@@ -57,7 +57,8 @@
 
 3. html 파일 생성 (리턴 값) - `resource/templates/leaf_first.html`
 
-- Controller에 있는 값(myName)을 th:text로 가져다 써서 원래 가진 값을 없애고 "타임리프"를 출력해낼 수 있음 
+- Controller에 있는 값(myName)을 th:text로 가져다 써서 치환되어 "타임리프"를 출력해낼 수 있음 
+- 이때, 치환될 것인데 Hello Thymeleaf을 써주는 이유는 ! 서버를 사용하지 않고 해당 페이지를 열었을 때 어떠한 화면이라도 출력하도록 하기 위해서 :smile_cat:
 
 ```html
 <!DOCTYPE html>
