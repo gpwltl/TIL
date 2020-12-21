@@ -12,3 +12,5 @@
 - [dictionary](https://github.com/gpwltl/TIL/blob/master/Python/dictionary.py)
 - [튜플, 셋](https://github.com/gpwltl/TIL/blob/master/Python/tuple_set.py)
 - [조건문](https://github.com/gpwltl/TIL/blob/master/Python/if.py)
+- [클래스]()
+- [상속]()
