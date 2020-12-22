@@ -1,5 +1,10 @@
 # Python
 
+## 기본 원리
+
+- [python]()
+- [compiler vs interpreter]()
+
 ## Python 기본 문법
 
 - [자료형, 연산자](https://github.com/gpwltl/TIL/blob/master/Python/practice.py)
