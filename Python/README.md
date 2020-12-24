@@ -2,8 +2,8 @@
 
 ## 기본 원리
 
-- [python]()
-- [compiler vs interpreter]()
+- [python 특징](https://github.com/gpwltl/TIL/blob/master/Python/theory/python.md)
+- [compiler vs interpreter](https://github.com/gpwltl/TIL/blob/master/Python/theory/interpreter.md)
 
 ## Python 기본 문법
 
@@ -17,5 +17,5 @@
 - [dictionary](https://github.com/gpwltl/TIL/blob/master/Python/dictionary.py)
 - [튜플, 셋](https://github.com/gpwltl/TIL/blob/master/Python/tuple_set.py)
 - [조건문](https://github.com/gpwltl/TIL/blob/master/Python/if.py)
-- [클래스]()
-- [상속]()
+- [클래스](https://github.com/gpwltl/TIL/blob/master/Python/class.py)
+- [상속](https://github.com/gpwltl/TIL/blob/master/Python/Inheritance.py)
