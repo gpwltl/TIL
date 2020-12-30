@@ -1,5 +1,5 @@
 # 🔎 Algorithm study
-[스터디-알고리즘 풀이](https://github.com/hyeyoon0808/Algorithm_Study)
+[스터디-알고리즘 풀이 👪](https://github.com/hyeyoon0808/Algorithm_Study)
 
 ## 기본 이론 정리
 
