@@ -4,11 +4,8 @@
 
 ## 기본 이론 정리
 
-- [완전탐색](https://github.com/gpwltl/TIL/blob/master/Algorithm/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89.md)
-  - 모의고사\_42840
-- [DP](https://github.com/gpwltl/TIL/blob/master/Algorithm/DP.md)
-  - 1,2,3 더하기\_9095
-  - 1로 만들기\_1463
+- [완전탐색](https://github.com/gpwltl/TIL/blob/master/Algorithm/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89.md) : 모의고사\_42840
+- [DP](https://github.com/gpwltl/TIL/blob/master/Algorithm/DP.md) : 1,2,3 더하기\_9095 / 1로 만들기\_1463
 
 ## 기본 문법(python)
 
