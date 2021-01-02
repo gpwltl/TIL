@@ -3,7 +3,10 @@
 ## 기본 이론 정리
 
 - [완전탐색](https://github.com/gpwltl/TIL/blob/master/Algorithm/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89.md)
-  - PRG [모의고사 python](https://github.com/hyeyoon0808/Algorithm_Study/blob/main/PRG/%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC_42840/gpwltl.py), [모의고사 js](https://github.com/gpwltl/Algorithm_Study/blob/main/PRG/%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC_42840/42840.js)
+  - 모의고사\_42840
+- [DP]()
+  - 1,2,3 더하기\_9095
+  - 1로 만들기\_1463
 
 ## 기본 문법(python)
 
