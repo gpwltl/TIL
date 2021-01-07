@@ -7,3 +7,5 @@
 - [자바스크립트 엔진](https://github.com/gpwltl/TIL/blob/master/Javascript/theory/javascript.md)
 
 - [DOM](https://github.com/gpwltl/TIL/blob/master/Javascript/theory/DOM.md)
+- [Ajax]()
+- [Promise]()
