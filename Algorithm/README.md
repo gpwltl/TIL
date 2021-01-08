@@ -6,8 +6,9 @@
 
 - [완전탐색](https://github.com/gpwltl/TIL/blob/master/Algorithm/%EC%99%84%EC%A0%84%ED%83%90%EC%83%89.md) : 모의고사\_42840
 - [DP](https://github.com/gpwltl/TIL/blob/master/Algorithm/DP.md) : 1,2,3 더하기\_9095 / 1로 만들기\_1463 / 계단오르기\_2579
-- [그리디](https://github.com/gpwltl/TIL/blob/master/Algorithm/%EA%B7%B8%EB%A6%AC%EB%94%94.md) : 거스름돈\_5585 설탕배달_2839
+- [그리디](https://github.com/gpwltl/TIL/blob/master/Algorithm/%EA%B7%B8%EB%A6%AC%EB%94%94.md) : 거스름돈\_5585 설탕배달\_2839
 - [구현](https://github.com/gpwltl/TIL/blob/master/Algorithm/%EA%B5%AC%ED%98%84.md)
+- [dfs, bfs]()
 
 ## 기본 문법(python)
 
