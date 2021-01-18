@@ -23,5 +23,5 @@
 - [map, filter](https://github.com/gpwltl/TIL/blob/master/Python/map.md)
 
 ## 자주 사용하는 라이브러리
-- [itertools](https://github.com/gpwltl/TIL/blob/master/Python/itertools.md)  >>  [예제]()
+- [itertools](https://github.com/gpwltl/TIL/blob/master/Python/itertools.md)
 
