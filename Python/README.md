@@ -19,6 +19,9 @@
 - [조건문](https://github.com/gpwltl/TIL/blob/master/Python/if.py)
 - [클래스](https://github.com/gpwltl/TIL/blob/master/Python/class.py)
 - [상속](https://github.com/gpwltl/TIL/blob/master/Python/Inheritance.py)
+- [정렬 sort, sorted]()
+- [map, filter]()
 
 ## 자주 사용하는 라이브러리
-- [itertools](https://github.com/gpwltl/TIL/blob/master/Python/itertools.md)
+- [itertools](https://github.com/gpwltl/TIL/blob/master/Python/itertools.md)  >>  [예제]()
+
