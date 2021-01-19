@@ -1,6 +1,3 @@
 # TIL
-Today I Learned :pencil2:
-
-> 1day 1commit 목표
->
-> Javascript의 경우 `javascript_study` Repositories에 따로 올림
+Today I Learned
+- 언어별 폴더 정리
