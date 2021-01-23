@@ -43,3 +43,20 @@ print(sorted(students, key=lambda x:x[2], reverse=True))
 # 내림차순, [('홍길동', 3.9, 2016303), ('김철수', 3.0, 2016302), ('최자영', 4.3, 2016301)]
 ```
 
+
+
+#### dict 일때
+
+```python
+alpha = {'a': 10000, 'c': 1010, 'd': 100, 'e': 10, 'b': 1, 'g': 100, 'f': 1}
+
+#key로 비교하고 싶을때1 (key만 다시 담을 때)
+print(sorted(alpha, key=lambda x: x[0], reverse=True))	# ['g', 'f', 'e', 'd', 'c', 'b', 'a']
+
+#key 비교2(value함께 담을 때 )
+print(sorted(alpha.items(), key=lambda x: x[0], reverse=True))	# [('g', 100), ('f', 1), ('e', 10), ('d', 100), ('c', 1010), ('b', 1), ('a', 10000)]
+
+#value로 비교하고 싶을때 
+print(sorted(alpha.items(), key=lambda x: x[1], reverse=True))	# [('a', 10000), ('c', 1010), ('d', 100), ('g', 100), ('e', 10), ('b', 1), ('f', 1)]
+```
+
