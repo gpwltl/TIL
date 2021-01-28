@@ -22,6 +22,7 @@
 - [정렬 sort, sorted](https://github.com/gpwltl/TIL/blob/master/syntax/Python/sort.md)
 - [map, filter](https://github.com/gpwltl/TIL/blob/master/Python/syntax/map.md)
 - [zip](https://github.com/gpwltl/TIL/blob/master/Python/syntax/zip.md)
+- [3차원리스트](https://github.com/gpwltl/TIL/blob/master/Python/syntax/3list.md)
 
 ## 자주 사용하는 라이브러리
 
