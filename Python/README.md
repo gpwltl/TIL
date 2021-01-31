@@ -13,7 +13,7 @@
 - [문자열](https://github.com/gpwltl/TIL/blob/master/Python/syntax/string.py)
 - [입출력](https://github.com/gpwltl/TIL/blob/master/Python/syntax/input.py)
 - [pickle, with](https://github.com/gpwltl/TIL/blob/master/Python/syntax/pickle%2Cwith.py)
-- [리스트](https://github.com/gpwltl/TIL/blob/master/Python/syntax/list.py)
+- [리스트](https://github.com/gpwltl/TIL/blob/master/Python/syntax/list.py) [리스트-](https://github.com/gpwltl/TIL/blob/master/Python/syntax/list.md)
 - [dictionary](https://github.com/gpwltl/TIL/blob/master/Python/syntax/dictionary.py)
 - [튜플, 셋](https://github.com/gpwltl/TIL/blob/master/Python/syntax/tuple_set.py)
 - [조건문](https://github.com/gpwltl/TIL/blob/master/Python/syntax/if.py)
