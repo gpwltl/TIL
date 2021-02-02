@@ -13,13 +13,13 @@
 조건이 전부 True면 True 리턴, 하나라도 틀리면 False 리턴
 
 ```python
-print(all([True, True, True, True]))	#True
-print(all([True, True, False, True]))	#False
-print(all([False, False, False]))			#False
+print(all([True, True, True, True]))    #True
+print(all([True, True, False, True]))   #False
+print(all([False, False, False]))       #False
 
-print(all([8,3,5]))				#True
-print(all([8,3,5,0]))			#False
-print(all([8,3,5,None]))	#False
+print(all([8,3,5]))         #True
+print(all([8,3,5,0]))       #False
+print(all([8,3,5,None]))    #False
 ```
 
 
@@ -31,11 +31,11 @@ print(all([8,3,5,None]))	#False
 ```python
 print(any([True, True, True, True]))	#True
 print(any([True, True, False, True]))	#True
-print(any([False, False, False]))			#False
+print(any([False, False, False]))	#False
 
-print(any([8,3,5]))				#True
-print(any([8,3,5,0]))			#True
-print(any([8,3,5,None]))	#True
+print(any([8,3,5]))	    #True
+print(any([8,3,5,0]))	    #True
+print(any([8,3,5,None]))    #True
 
 print(any(['']))		#False
 print(any([]))			#False
